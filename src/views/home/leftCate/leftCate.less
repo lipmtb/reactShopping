@@ -1,0 +1,41 @@
+.left-cate-wrapper{
+    position:absolute;
+    width: 200px;
+    left:0;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.61);
+    z-index: 20;
+
+
+    ul.all-cate-lists{
+      
+        li.main-item{
+            padding:18.8px 0px;
+            padding-left:15px;
+            cursor: pointer;
+           >a{
+            width:20%;
+            color:#fff;
+           }
+           > div.sub-item-lists{
+                width:80%;
+                white-space: nowrap;
+                overflow: hidden;
+                font-size:0.6em;
+             
+                a.sub-item-text{
+                    color:#fff;
+                    margin:0 6px;
+                    line-height: 18px;
+                }
+           }
+
+           &.activeLi{
+               background-color: palegreen;
+           }
+          
+        }
+        
+    }
+  
+}

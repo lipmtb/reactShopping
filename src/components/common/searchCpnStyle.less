@@ -1,0 +1,31 @@
+.searchcpn-wrapper{
+    position: relative;
+    &.focusSearchClass{
+        input#search-header-in{
+            width:180px;
+        }
+    }
+    input#search-header-in{
+      
+        border:none;
+        border-bottom:1px solid #eee;
+        outline: none;
+        padding:0.2em;
+        border-radius: 4px;
+        width:40px;
+        transition: width 1s;
+        
+        &::placeholder{
+            color:#ddd;
+            font-size:0.6em;
+        }
+    }
+
+    i.icon-search{
+        position:absolute;
+        right:0px;
+        top:6px;
+        cursor: pointer;
+        font-size:0.6em;
+    }
+}

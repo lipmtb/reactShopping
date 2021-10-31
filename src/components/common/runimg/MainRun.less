@@ -1,0 +1,40 @@
+ul.imglists-wrapper{
+ 
+    position:relative;
+    overflow: hidden;
+    height:500px;
+    li.img-item{
+        position:absolute;
+        left:0;
+        top:0;
+        transition:left 1s linear;
+        width:1240px;
+        height:500px;
+        a{
+            img{
+
+                vertical-align: middle;
+            }
+        }
+    }
+   > ul.circle-lists{
+        position:absolute;
+        left:0;
+        right:0;
+        bottom:100px;
+        text-align: center;
+        z-index:11;
+        > li.circle-item{
+            display: inline-block;
+            width:10px;
+            height:10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin:0 20px;
+            transition:background-color 1s;
+            &.activeCircle{
+                background-color:orange;
+            }
+        }
+    }
+}

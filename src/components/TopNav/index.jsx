@@ -12,7 +12,8 @@ import  "./TopNav.less";
     toLogin=()=>{
         this.props.loginAction({
             username:"jjcc",
-            userid:"123456"
+            userid:"123456",
+            token:"tokenafafadfsfs"
         })
     }
 
@@ -21,7 +22,7 @@ import  "./TopNav.less";
     }
 
     render() {
-        console.log("TopNavRender",this.props.userinfo);
+        // console.log("TopNavRender",this.props.userinfo);
         return <nav  className="container app-top-nav clearfix">
           
                 <ul className="nav-top-lists fr">

@@ -1,9 +1,20 @@
+import {lazy,Suspense} from "react";
 
-import TopNav from "@/components/TopNav/TopNav.jsx"
+
+import {Route,Switch} from "react-router-dom";
+
+const Layout=lazy(()=>import("./views/layout"))
+const LoginPage=lazy(()=>import("./views/loginPage"))
 function App() {
-  return (
+  return (  
     <div className="App">
-        <TopNav/>
+        <Suspense fallback="正在加载中...">
+          <Switch>
+             <Route  path="/login" component={LoginPage}></Route>
+             <Route  path="/" component={Layout}></Route>
+          </Switch>
+     
+        </Suspense>
     </div>
   );
 }

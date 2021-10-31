@@ -3,17 +3,20 @@ import {LOGINUSER,LOGINOUT} from "../actionType.js";
 const initState = {
   userinfo:{
       username:"",
-      userid:""
+      userid:"",
+      token:""
   }
 }
 let userinfo=localStorage.getItem("userinfo");
 if(userinfo){
+    userinfo=JSON.parse(userinfo);
     initState.userinfo.userid=userinfo.userid;
     initState.userinfo.username=userinfo.username;
+    initState.userinfo.token=userinfo.token;
 }
 
 export default function userinfoReducer(prevState=initState,action){
-    console.log("userReducer init prevState is:",prevState);
+    // console.log("userReducer init prevState is:",prevState);
     let {
         type,
         data
@@ -22,26 +25,30 @@ export default function userinfoReducer(prevState=initState,action){
         case LOGINUSER:{
             let {
                 username,
-                userid
+                userid,
+                token
             }=data;
             localStorage.setItem("userinfo",JSON.stringify({
                 username,
-                userid
+                userid,
+                token
             }))
             return {
                 userinfo:{
                     username,
-                    userid
+                    userid,
+                    token
                 }
             }
           
         }
         case LOGINOUT:{
-            localStorage.clear();
+            localStorage.removeItem("userinfo");
             return {
                 userinfo:{
                     username:"",
-                    userid:""
+                    userid:"",
+                    token:""
                 }
             }
         }

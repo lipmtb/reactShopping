@@ -1,0 +1,63 @@
+
+.hot-brand-wrapper{
+    width:100%;
+
+    padding-left:15px;
+}
+// 顶部控制
+.top-control{
+    h3.hot-brand-text{
+        font-size: 2em;
+        font-weight: 400;
+    }
+
+    span.brand-subtext{
+        line-height: 36px;
+        margin-top:2.2em;
+        margin-left:6px;
+        color: #ccc;
+    }
+
+    .right-control-btn{
+        margin-right:100px;
+        margin-top:2em;
+        span[class*='icon-angle']{
+            display: inline-block;
+            width:20px;
+            height: 20px;
+            background-color: powderblue;
+            margin:0 4px;
+            text-align: center;
+            color: #fff;
+            padding:2px;
+            &.disabledBtn{
+                cursor: not-allowed;
+                color:red;
+            }
+        }
+    }
+}
+
+
+img.brand-img-show{
+    width:240px;
+    height:305px;
+    vertical-align: middle;
+}
+
+div.brand-wrapper{
+    width:1280px;
+    overflow: hidden;
+    height:305px;
+    position:relative;
+    ul.hot-brand-lists{
+        position:absolute;
+        left:0;
+        top:0;
+        width:200%;
+        transition: left 2s linear;
+        li.brand-img-item{
+            margin-right:10px;
+        }
+    }
+}

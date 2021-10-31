@@ -7,11 +7,11 @@ module.exports = override(
         ["components"]:resolve("src/components"),
         ["network"]:resolve("src/network"),
         ["assets"]:resolve("src/assets"),
-        ["container"]:resolve("src/container"),
-        ["util"]:resolve("src/util"),
+        ["mixins"]:resolve("src/mixins"),
         ["vender"]:resolve("src/vender"),
         ["views"]:resolve("src/views"),
         ["jjccredux"]:resolve("src/jjccredux"),
+        ["hoc"]:resolve("src/hoc"),
     }),
     addLessLoader({
       lessOptions: {
